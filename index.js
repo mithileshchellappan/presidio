@@ -10,7 +10,7 @@ mongoose
 	.then(() => {
 		const app = express()
 		app.use("/api", createProxyMiddleware({ 
-			target: 'http://localhost:8080/', //original url
+			target: 'http://localhost:3000/', //original url
 			changeOrigin: true, 
 			//secure: false,
 			onProxyRes: function (proxyRes, req, res) {
