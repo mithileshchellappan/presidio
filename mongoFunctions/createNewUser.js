@@ -7,8 +7,8 @@ module.exports = async (req,res)=>{
             console.log('create new')
             const result = await userSchema.create(
                 {
-                    username:req.body.username
-
+                    username:req.body.username,
+                    coins:req.body.coins?req.body.coins:0
                 }
             )
             console.log(result)

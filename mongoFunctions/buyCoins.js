@@ -5,6 +5,7 @@ module.exports = async (req,res)=>{
     return await mongo().then(async mongoose =>{
         try{
             console.log('create new')
+            if(!req.body.username)return res.status(400)
         const result = await userSchema.findOneAndUpdate({
                 username:req.body.username
             },{

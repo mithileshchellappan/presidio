@@ -9,6 +9,7 @@ mongoose
 	.then(() => {
 		const app = express()
 		app.use("/api", routes) 
+		app.use(express.urlencoded({extended: true}));
         app.use(bodyParser.urlencoded({ extended: true }));
 		app.listen(port, () => {
 			console.log("Server has started!")

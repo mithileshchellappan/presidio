@@ -1,5 +1,6 @@
 const express = require("express");
 const buyCoins = require("./mongoFunctions/buyCoins");
+const createAdmin = require("./mongoFunctions/createAdmin");
 const createNewUser = require('./mongoFunctions/createNewUser');
 const getUserDetails = require("./mongoFunctions/getUserDetails");
 const transactonBetweenUser = require("./mongoFunctions/transactonBetweenUser");
@@ -14,5 +15,6 @@ router.get('/',async(req,res)=>{
 router.post('/buyCoins',bodyParser,buyCoins)
 router.post('/getUser',bodyParser,getUserDetails)
 router.post('/transfer',bodyParser,transactonBetweenUser)
+router.post('/createAdmin',bodyParser,createAdmin)
 
 module.exports = router

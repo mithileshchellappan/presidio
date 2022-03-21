@@ -7,6 +7,7 @@ const userSchema = mongoose.Schema({
     required: true,
   },
   coins: { type: Number, default: 0 },
+  type:{type:String,default:'User'}
   
 },{
     timestamps:true

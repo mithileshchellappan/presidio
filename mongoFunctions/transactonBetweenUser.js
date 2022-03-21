@@ -39,7 +39,10 @@ module.exports = async (req,res)=>{
                 coins:req.body.coins
             })
 
-            res.send(result1,result2,transactionHistory)
+            res.send({code:200,data:'Success'})
+            res.status(200)
+
+            
         }
         }finally{
             mongoose.connection.close();
