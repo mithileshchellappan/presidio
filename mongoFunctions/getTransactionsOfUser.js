@@ -5,6 +5,8 @@ const { request } = require("express");
 module.exports = async (req, res) => {
   return await mongo().then(async (mongoose) => {
     try {
+      console.log('in get transactions')
+      console.log(req.body.username)
       const result = await transactionSchema.find({
         $or: [
           { sender: req.body.username },
